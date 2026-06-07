@@ -158,7 +158,7 @@ body.is-content-scrolled .site-nav a.is-active {
   right: 0;
   left: 0;
   z-index: 0;
-  height: var(--banner-height);
+  height: calc(var(--banner-height) * 1.1);
   background-color: #000000;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)),
@@ -436,16 +436,47 @@ li {
 
 .contact-content {
   display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(360px, 1fr) minmax(280px, 0.72fr);
   gap: clamp(28px, 5vw, 64px);
+  align-items: center;
   border-top: 1px solid var(--line);
 }
 
+.contact-details h2 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-details h2 span {
+  color: var(--gold);
+  font-size: 0.44em;
+}
+
 .contact-content address {
-  display: grid;
-  gap: 10px;
   color: var(--muted);
   font-style: normal;
+}
+
+.contact-content address p {
+  margin: 0 0 22px;
+  font-size: clamp(1rem, 1.6vw, 1.32rem);
+  line-height: 1.42;
+}
+
+.contact-content address strong {
+  font-weight: 850;
+}
+
+.contact-content address span {
+  display: block;
+}
+
+.cv-button {
+  justify-self: center;
+  width: min(280px, 100%);
+  min-height: 48px;
+  font-size: clamp(1rem, 1.44vw, 1.2rem);
 }
 
 .teaching-content {
@@ -462,9 +493,24 @@ li {
   height: auto;
 }
 
-.teaching-note {
+.teaching-quote {
   grid-column: 1 / -1;
   margin-top: clamp(42px, 6vw, 76px);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.quote-mark {
+  display: block;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.teaching-note {
+  margin: clamp(28px, 4vw, 48px) 0;
+  text-align: left;
   font-size: clamp(1rem, 1.6vw, 1.28rem);
 }
 
@@ -487,14 +533,25 @@ li {
 .openings-content {
   display: grid;
   justify-items: center;
-  gap: 42px;
+  gap: clamp(36px, 5vw, 68px);
   min-height: 500px;
-  text-align: center;
 }
 
 .openings-content p {
+  justify-self: start;
   max-width: 1120px;
   font-size: clamp(0.92rem, 1.36vw, 1.08rem);
+}
+
+.flyer-button {
+  width: min(520px, 100%);
+}
+
+.flyer-frame {
+  width: min(1320px, 100%);
+  height: min(1180px, 82vh);
+  border: 0;
+  background: #1f1f1f;
 }
 
 @media (max-width: 960px) {
