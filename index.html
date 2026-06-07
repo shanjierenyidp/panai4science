@@ -7,9 +7,9 @@
   <title>Pan Du | AI for Health &amp; Physics</title>
   <link rel="icon" type="image/png" href="materials/logo2.001.png">
   <link rel="apple-touch-icon" href="materials/logo2.001.png">
-  <link rel="stylesheet" href="styles.css?v=20260607-contact-button">
+  <link rel="stylesheet" href="styles.css?v=20260607-language-toggle">
 </head>
-<body data-section="home">
+<body data-section="home" data-lang="en">
   <div class="water-stage" aria-hidden="true"></div>
   <div class="page-scrollbar" aria-hidden="true">
     <div class="page-scrollbar-thumb"></div>
@@ -17,11 +17,15 @@
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Pan Du home">www.panai4science.com</a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#home" data-nav-section="home">Home</a>
-      <a href="#news" data-nav-section="news">News</a>
-      <a href="#publications" data-nav-section="publications">Publications</a>
-      <a href="#teaching" data-nav-section="teaching">Teaching</a>
-      <a href="#openings" data-nav-section="openings">Openings</a>
+      <a href="#home" data-nav-section="home"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
+      <a href="#news" data-nav-section="news"><span class="lang-en">News</span><span class="lang-zh">动态</span></a>
+      <a href="#publications" data-nav-section="publications"><span class="lang-en">Publications</span><span class="lang-zh">论文</span></a>
+      <a href="#teaching" data-nav-section="teaching"><span class="lang-en">Teaching</span><span class="lang-zh">教学</span></a>
+      <a href="#openings" data-nav-section="openings"><span class="lang-en">Openings</span><span class="lang-zh">招生</span></a>
+      <button class="language-toggle" type="button" aria-label="Switch language" aria-pressed="false">
+        <span>EN</span>
+        <span>中文</span>
+      </button>
     </nav>
   </header>
 
@@ -32,7 +36,7 @@
           <img class="profile-photo" src="materials/photo.png" alt="Portrait of Pan Du">
           <h1>Pan Du</h1>
           <div class="gold-rule" aria-hidden="true"></div>
-          <p class="tagline">Exploring AI for health &amp; physics</p>
+          <p class="tagline"><span class="lang-en">Exploring AI for health &amp; physics</span><span class="lang-zh">探索面向健康与物理科学的人工智能</span></p>
           <div class="social-links" aria-label="Profile links">
             <a href="http://www.panai4science.com" aria-label="Pan Du website">
               <img src="materials/logo2.001.png" alt="">
@@ -53,18 +57,21 @@
         </div>
       </div>
       <div class="hiring-ad">
-        <a href="#openings">We are currently hiring PhD students at Department of Mechanical Engineering at Iowa State University</a>
+        <a href="#openings"><span class="lang-en">We are currently hiring PhD students at Department of Mechanical Engineering at Iowa State University</span><span class="lang-zh">我们正在爱荷华州立大学机械工程系招收博士生</span></a>
       </div>
       <div class="content-section about-content">
         <div class="text-block">
-          <h2>About</h2>
-          <p>
+          <h2><span class="lang-en">About</span><span class="lang-zh">关于我</span></h2>
+          <p class="lang-en">
             I am an incoming Assistant Professor in the Department of Mechanical Engineering at Iowa State
             University, where I will establish the Physics &amp; Health via AI and Shape Emulation (PHASE) Lab
             beginning in Fall 2027. My research focuses on scientific machine learning for computational
             physics and geometry modeling.
           </p>
-          <p>
+          <p class="lang-zh">
+            我即将加入爱荷华州立大学机械工程系担任助理教授，并将于 2027 年秋季建立 Physics &amp; Health via AI and Shape Emulation (PHASE) 实验室。我的研究聚焦于面向计算物理与几何建模的科学机器学习方法。
+          </p>
+          <p class="lang-en">
             I received my undergraduate degree from Tsinghua University and my master's degree from
             Washington University in St. Louis under Prof.
             <a href="https://engineering.washu.edu/faculty/Ramesh-Agarwal.html" rel="noopener" target="_blank">Ramesh Agarwal</a>.
@@ -74,87 +81,99 @@
             and I am currently a postdoctoral researcher at the University of California, Berkeley with Prof.
             <a href="https://me.berkeley.edu/people/shawn-shadden/" rel="noopener" target="_blank">Shawn Shadden</a>.
           </p>
-          <p>
+          <p class="lang-zh">
+            我本科毕业于清华大学，随后在圣路易斯华盛顿大学师从
+            <a href="https://engineering.washu.edu/faculty/Ramesh-Agarwal.html" rel="noopener" target="_blank">Ramesh Agarwal</a>
+            教授获得硕士学位。我在圣母大学航空航天与机械工程专业师从
+            <a href="https://jianxunwang.engineering.cornell.edu/" rel="noopener" target="_blank">Jian-Xun Wang</a>
+            教授获得博士学位，目前在加州大学伯克利分校
+            <a href="https://me.berkeley.edu/people/shawn-shadden/" rel="noopener" target="_blank">Shawn Shadden</a>
+            教授课题组从事博士后研究。
+          </p>
+          <p class="lang-en">
             My research integrates AI, CFD, and geometric modeling to enable scalable many-query analysis and digital twins for PDE-governed systems, with applications ranging from cardiovascular biomechanics to broader multi-physics problems. Moving forward, my PHASE lab aims to push the boundaries of AI and geometry modeling technologies to advance innovation in physical and biomedical sciences.
+          </p>
+          <p class="lang-zh">
+            我的研究融合人工智能、计算流体力学与几何建模，旨在为偏微分方程支配系统构建可扩展的多查询分析方法与数字孪生技术，应用涵盖心血管生物力学以及更广泛的多物理场问题。未来，PHASE 实验室将推动人工智能与几何建模技术的发展，服务于物理科学与生物医学领域的创新。
           </p>
         </div>
         <img class="focus-diagram" src="materials/front%20page.png" alt="Artificial intelligence, geometry modeling, and computational physics research focus diagram">
       </div>
 
       <div class="content-section research-content">
-        <h2>Research projects</h2>
+        <h2><span class="lang-en">Research projects</span><span class="lang-zh">研究项目</span></h2>
         <div class="research-grid">
           <article class="research-card">
             <img src="materials/1.jpeg" alt="Medical image segmentation pipeline with uncertainty visualization">
-            <h3>AI-powered image segmentation with uncertainty quantification</h3>
+            <h3><span class="lang-en">AI-powered image segmentation with uncertainty quantification</span><span class="lang-zh">融合不确定性量化的 AI 医学图像分割</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/2.gif" alt="Animated vascular geometry generation result">
-            <h3>Generative modeling for vascular geometry</h3>
+            <h3><span class="lang-en">Generative modeling for vascular geometry</span><span class="lang-zh">血管几何的生成式建模</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/3.gif" alt="Animated cross-patient vascular shape registration">
-            <h3>Cross-patient shape registration</h3>
+            <h3><span class="lang-en">Cross-patient shape registration</span><span class="lang-zh">跨患者形状配准</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/4.gif" alt="Animated differentiable fluid mechanics simulation">
-            <h3>Differentiable modeling for fluid mechanics</h3>
+            <h3><span class="lang-en">Differentiable modeling for fluid mechanics</span><span class="lang-zh">流体力学的可微建模</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/5.gif" alt="Animated turbulence field generated by AI model">
-            <h3>Generative AI for turbulence modeling</h3>
+            <h3><span class="lang-en">Generative AI for turbulence modeling</span><span class="lang-zh">面向湍流建模的生成式 AI</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/7.gif" alt="Animated semi-automatic image segmentation workflow">
-            <h3>Semi-automatic image segmentation</h3>
+            <h3><span class="lang-en">Semi-automatic image segmentation</span><span class="lang-zh">半自动医学图像分割</span></h3>
           </article>
           <article class="research-card">
             <img src="materials/6.jpeg" alt="Large-scale aerodynamics and turbulence combustion examples">
-            <h3>Large-scale computational physics</h3>
+            <h3><span class="lang-en">Large-scale computational physics</span><span class="lang-zh">大规模计算物理</span></h3>
           </article>
         </div>
       </div>
 
       <div class="content-section contact-content">
         <div class="contact-details">
-          <h2>Contact <span aria-hidden="true"></span></h2>
+          <h2><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></h2>
           <address>
-            <p><strong>Email:</strong> <a href="mailto:panai4health@berkeley.edu">panai4health@berkeley.edu</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+15748009663">5748009663</a></p>
+            <p><strong><span class="lang-en">Email:</span><span class="lang-zh">邮箱：</span></strong> <a href="mailto:panai4health@berkeley.edu">panai4health@berkeley.edu</a></p>
+            <p><strong><span class="lang-en">Phone:</span><span class="lang-zh">电话：</span></strong> <a href="tel:+15748009663">5748009663</a></p>
             <p>
-              <strong>Affiliation:</strong>
-              <span>University of California, Berkeley</span>
+              <strong><span class="lang-en">Affiliation:</span><span class="lang-zh">单位：</span></strong>
+              <span><span class="lang-en">University of California, Berkeley</span><span class="lang-zh">加州大学伯克利分校</span></span>
               <span>2167 Etcheverry Hall, Berkeley, CA 94720</span>
             </p>
           </address>
         </div>
-        <a class="button cv-button" href="materials/CV_04292026.pdf" download>Download CV</a>
+        <a class="button cv-button" href="materials/CV_04292026.pdf" download><span class="lang-en">Download CV</span><span class="lang-zh">下载简历</span></a>
       </div>
     </section>
 
     <section id="news" class="page-section" data-section="news">
       <div class="page-banner banner-news">
         <div class="banner-title">
-          <h1>News</h1>
+          <h1><span class="lang-en">News</span><span class="lang-zh">动态</span></h1>
           <div class="gold-rule" aria-hidden="true"></div>
         </div>
       </div>
       <div class="content-section news-content">
-        <h2>Upcoming events</h2>
+        <h2><span class="lang-en">Upcoming events</span><span class="lang-zh">近期动态</span></h2>
         <ul>
-          <li>I will be joining Department of Mechanical Engineering at Iowa State University as a tenure-track assistant professor in Fall 2027.</li>
-          <li>Downstream application for the DiFVM solver is on the way.</li>
+          <li><span class="lang-en">I will be joining Department of Mechanical Engineering at Iowa State University as a tenure-track assistant professor in Fall 2027.</span><span class="lang-zh">我将于 2027 年秋季加入爱荷华州立大学机械工程系，担任终身教职序列助理教授。</span></li>
+          <li><span class="lang-en">Downstream application for the DiFVM solver is on the way.</span><span class="lang-zh">DiFVM 求解器的下游应用正在开发中。</span></li>
         </ul>
 
-        <h2>Past events</h2>
+        <h2><span class="lang-en">Past events</span><span class="lang-zh">过往动态</span></h2>
         <ul>
-          <li>(April 2026) Our GPU enabled solver DiFVM is online: <a href="https://arxiv.org/abs/2603.15920" rel="noopener" target="_blank">arXiv:2603.15920</a>.</li>
-          <li>(Feb 2026) I will be joining Dr. Shawn Shadden's lab at University of California, Berkeley starting Feb 9.</li>
-          <li>(Jan 2026) I will defend my Ph.D. dissertation on the topic <strong>From Medical Imaging to Hemodynamics: AI-Enabled Modeling of Cardiovascular Flow</strong>.</li>
-          <li>(Nov 2025) I will be attending APS DFD as chair host for Biological Fluid Dynamics: Cardiac Flow II. I will also present our latest GPU-enabled solver titled "<strong>Differentiable Graph-Based Finite Volume Solver for Patient-Specific Cardiovascular Flow Simulation</strong>"</li>
-          <li>(Sep 2025) I am entering the academic job market this year for faculty positions focused on scientific machine learning, computational fluid dynamics, and cardiovascular flow. </li>
-          <li>(Jul 2025) I will be attending USNCCM18 on July 20 at Chicago! See you guys there! </li>
-          <li>(Jul 2025) I will be teaching AME 40411: Introduction to Artificial Intelligence this fall at the University of Notre Dame.</li>
+          <li><span class="lang-en">(April 2026) Our GPU enabled solver DiFVM is online:</span><span class="lang-zh">（2026 年 4 月）我们的 GPU 加速求解器 DiFVM 已上线：</span> <a href="https://arxiv.org/abs/2603.15920" rel="noopener" target="_blank">arXiv:2603.15920</a>.</li>
+          <li><span class="lang-en">(Feb 2026) I will be joining Dr. Shawn Shadden's lab at University of California, Berkeley starting Feb 9.</span><span class="lang-zh">（2026 年 2 月）我将于 2 月 9 日起加入加州大学伯克利分校 Shawn Shadden 教授课题组。</span></li>
+          <li><span class="lang-en">(Jan 2026) I will defend my Ph.D. dissertation on the topic <strong>From Medical Imaging to Hemodynamics: AI-Enabled Modeling of Cardiovascular Flow</strong>.</span><span class="lang-zh">（2026 年 1 月）我将进行博士论文答辩，论文题目为 <strong>From Medical Imaging to Hemodynamics: AI-Enabled Modeling of Cardiovascular Flow</strong>。</span></li>
+          <li><span class="lang-en">(Nov 2025) I will be attending APS DFD as chair host for Biological Fluid Dynamics: Cardiac Flow II. I will also present our latest GPU-enabled solver titled "<strong>Differentiable Graph-Based Finite Volume Solver for Patient-Specific Cardiovascular Flow Simulation</strong>"</span><span class="lang-zh">（2025 年 11 月）我将参加 APS DFD，并担任 Biological Fluid Dynamics: Cardiac Flow II 分会主持人。同时，我将报告我们最新的 GPU 加速求解器工作：<strong>Differentiable Graph-Based Finite Volume Solver for Patient-Specific Cardiovascular Flow Simulation</strong>。</span></li>
+          <li><span class="lang-en">(Sep 2025) I am entering the academic job market this year for faculty positions focused on scientific machine learning, computational fluid dynamics, and cardiovascular flow.</span><span class="lang-zh">（2025 年 9 月）我今年进入学术职位市场，研究方向聚焦科学机器学习、计算流体力学与心血管流动。</span></li>
+          <li><span class="lang-en">(Jul 2025) I will be attending USNCCM18 on July 20 at Chicago! See you guys there!</span><span class="lang-zh">（2025 年 7 月）我将于 7 月 20 日在芝加哥参加 USNCCM18，期待见到大家！</span></li>
+          <li><span class="lang-en">(Jul 2025) I will be teaching AME 40411: Introduction to Artificial Intelligence this fall at the University of Notre Dame.</span><span class="lang-zh">（2025 年 7 月）我将在今年秋季于圣母大学讲授 AME 40411：人工智能导论。</span></li>
 
 
 
@@ -165,14 +184,14 @@
     <section id="publications" class="page-section" data-section="publications">
       <div class="page-banner banner-publications">
         <div class="banner-title">
-          <h1>Publications</h1>
+          <h1><span class="lang-en">Publications</span><span class="lang-zh">论文发表</span></h1>
           <div class="gold-rule" aria-hidden="true"></div>
         </div>
       </div>
       <div class="content-section publications-content">
-        <h2>Publications</h2>
+        <h2><span class="lang-en">Publications</span><span class="lang-zh">论文发表</span></h2>
         <article>
-          <h3>Preprints</h3>
+          <h3><span class="lang-en">Preprints</span><span class="lang-zh">预印本</span></h3>
           <ol>
             <!-- <li>Wang, X., Du, P., Taneja K., Doon-Ralls, J., Reategui, E., &amp; Holland, M. (2026). Discovery of Self-Limiting Neutrophil Swarming Using Bayesian Physics-Informed Neural Network.</li> -->
             <!-- <li>Guo, J., Du, P., &amp; Wang, J. X. (2026). Separable Conditional Neural Fields for In-Situ Compression of High-Fidelity Spatiotemporal Turbulence Simulation Data.</li> .  <a href=" " target="_blank" rel="noopener"> </a>.-->
@@ -183,7 +202,7 @@
         </article>
 
         <article>
-          <h3>Published</h3>
+          <h3><span class="lang-en">Published</span><span class="lang-zh">已发表</span></h3>
           <ol>
             <li>Guo, J., Du, P., &amp; Wang, J. X. (2026). <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dQ-bcooAAAAJ&sortby=pubdate&citation_for_view=dQ-bcooAAAAJ:NhqRSupF_l8C" target="_blank" rel="noopener">Conditional Neural Field for Spatial Dimensionality Reduction of Turbulence Data: A Comparison Study</a>. <em>Physics of Fluids</em>, 38(2).</li>
             <li>Du, P., An, D., Wang, C., &amp; Wang, J. X. (2025). <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dQ-bcooAAAAJ&sortby=pubdate&citation_for_view=dQ-bcooAAAAJ:cFHS6HbyZ2cC" target="_blank" rel="noopener">AI-Powered Automated Model Construction for Patient-Specific CFD Simulations of Aortic Flows</a>. <em>Science Advances</em>, 11(36), eadw2825.</li>
@@ -208,7 +227,7 @@
           </ol>
         </article>
         <article>
-          <h3>PhD thesis</h3>
+          <h3><span class="lang-en">PhD thesis</span><span class="lang-zh">博士论文</span></h3>
           <ol>
             <li>Du, P., (2026). <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dQ-bcooAAAAJ&sortby=pubdate&citation_for_view=dQ-bcooAAAAJ:KxtntwgDAa4C" target="_blank" rel="noopener">From Medical Imaging to Hemodynamics: AI-Enabled Modeling of Cardiovascular Flow</a>. <em>University of Notre Dame</em>.</li>
           </ol>
@@ -219,23 +238,26 @@
     <section id="teaching" class="page-section" data-section="teaching">
       <div class="page-banner banner-teaching">
         <div class="banner-title">
-          <h1>Teaching</h1>
+          <h1><span class="lang-en">Teaching</span><span class="lang-zh">教学</span></h1>
           <div class="gold-rule" aria-hidden="true"></div>
         </div>
       </div>
       <div class="content-section teaching-content">
         <img src="materials/course_page.jpeg" alt="Course cover for Introduction to Artificial Intelligence">
         <div>
-          <h2>AME40411 Introduction to Artificial Intelligence</h2>
-          <p>Course Instructor, undergraduate level, Fall 2025, 3 credits.</p>
-          <a class="button" href="mailto:panai4health@berkeley.edu?subject=AME40411%20syllabus">Download syllabus</a>
+          <h2><span class="lang-en">AME40411 Introduction to Artificial Intelligence</span><span class="lang-zh">AME40411 人工智能导论</span></h2>
+          <p><span class="lang-en">Course Instructor, undergraduate level, Fall 2025, 3 credits.</span><span class="lang-zh">课程教师，本科生课程，2025 年秋季，3 学分。</span></p>
+          <a class="button" href="mailto:panai4health@berkeley.edu?subject=AME40411%20syllabus"><span class="lang-en">Download syllabus</span><span class="lang-zh">下载课程大纲</span></a>
         </div>
         <blockquote class="teaching-quote">
           <span class="quote-mark" aria-hidden="true">"</span>
-          <p class="teaching-note">
+          <p class="teaching-note lang-en">
             My teaching philosophy emphasizes integrating modern AI methods with physical intuition and
             engineering principles. I aim to help students develop both theoretical understanding and
             practical problem-solving skills for next-generation computational engineering.
+          </p>
+          <p class="teaching-note lang-zh">
+            我的教学理念强调将现代人工智能方法与物理直觉和工程原理相结合。我希望帮助学生同时建立理论理解与实际问题解决能力，为下一代计算工程实践做好准备。
           </p>
           <span class="quote-mark" aria-hidden="true">"</span>
         </blockquote>
@@ -245,17 +267,18 @@
     <section id="openings" class="page-section" data-section="openings">
       <div class="page-banner banner-openings">
         <div class="banner-title">
-          <h1>We are hiring!</h1>
+          <h1><span class="lang-en">We are hiring!</span><span class="lang-zh">博士招生中！</span></h1>
           <div class="gold-rule" aria-hidden="true"></div>
         </div>
       </div>
       <div class="content-section openings-content">
-        <p>We are currently hiring highly motivated PhD students, please see details in the hiring ad below.</p>
-        <a class="button flyer-button" href="materials/PHD_recruitment_en.pdf" download>Download Recruitment Flyer</a>
+        <p><span class="lang-en">We are currently hiring highly motivated PhD students, please see details in the hiring ad below.</span><span class="lang-zh">我们正在招收积极主动的博士生，具体信息请见下方招生广告。</span></p>
+        <a class="button flyer-button" href="materials/PHD_recruitment_en.pdf" download><span class="lang-en">Download Recruitment Flyer</span><span class="lang-zh">下载招生海报</span></a>
         <object class="flyer-frame" data="materials/PHD_recruitment_en.pdf" type="application/pdf">
           <p>
-            The recruitment flyer could not be displayed in this browser.
-            <a href="materials/PHD_recruitment_en.pdf">Open the PDF</a>.
+            <span class="lang-en">The recruitment flyer could not be displayed in this browser.</span>
+            <span class="lang-zh">当前浏览器无法显示招生海报。</span>
+            <a href="materials/PHD_recruitment_en.pdf"><span class="lang-en">Open the PDF</span><span class="lang-zh">打开 PDF</span></a>.
           </p>
         </object>
       </div>
@@ -269,11 +292,43 @@
     const waterStage = document.querySelector(".water-stage");
     const scrollbar = document.querySelector(".page-scrollbar");
     const scrollbarThumb = document.querySelector(".page-scrollbar-thumb");
+    const languageToggle = document.querySelector(".language-toggle");
     const rootStyle = document.documentElement.style;
     const waterStep = 25;
     const waterScrollRatio = 1 / 3;
     let activeIndex = 0;
     let currentWaterX = 0;
+
+    const languageStore = {
+      get() {
+        try {
+          return localStorage.getItem("panai-language");
+        } catch {
+          return null;
+        }
+      },
+      set(language) {
+        try {
+          localStorage.setItem("panai-language", language);
+        } catch {
+          // Language switching still works for the current page view.
+        }
+      },
+    };
+
+    const setLanguage = (language) => {
+      const nextLanguage = language === "zh" ? "zh" : "en";
+      document.body.dataset.lang = nextLanguage;
+      document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+      languageToggle?.setAttribute("aria-pressed", String(nextLanguage === "zh"));
+      languageStore.set(nextLanguage);
+    };
+
+    languageToggle?.addEventListener("click", () => {
+      setLanguage(document.body.dataset.lang === "zh" ? "en" : "zh");
+    });
+
+    setLanguage(languageStore.get() || "en");
 
     const syncWaterVerticalPosition = () => {
       const activeSection = pageSections.get(pageOrder[activeIndex]);

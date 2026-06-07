@@ -33,6 +33,15 @@ body {
   line-height: 1.65;
 }
 
+.lang-zh,
+body[data-lang="zh"] .lang-en {
+  display: none;
+}
+
+body[data-lang="zh"] .lang-zh {
+  display: revert;
+}
+
 .page-scrollbar {
   position: fixed;
   top: 0;
@@ -149,6 +158,53 @@ body.is-content-scrolled .site-nav a + a::before {
 }
 
 body.is-content-scrolled .site-nav a.is-active {
+  color: var(--ink);
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0 2px 14px;
+  border: 0;
+  color: rgba(255, 255, 255, 0.86);
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+.language-toggle::before {
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.52);
+  content: "·";
+}
+
+.language-toggle span:first-child::after {
+  margin-left: 6px;
+  color: rgba(255, 255, 255, 0.52);
+  content: "/";
+}
+
+body.is-content-scrolled .language-toggle {
+  color: rgba(17, 17, 17, 0.78);
+  text-shadow: none;
+}
+
+body.is-content-scrolled .language-toggle::before,
+body.is-content-scrolled .language-toggle span:first-child::after {
+  color: rgba(17, 17, 17, 0.36);
+}
+
+body[data-lang="en"] .language-toggle span:first-child,
+body[data-lang="zh"] .language-toggle span:last-child {
+  color: var(--white);
+}
+
+body.is-content-scrolled[data-lang="en"] .language-toggle span:first-child,
+body.is-content-scrolled[data-lang="zh"] .language-toggle span:last-child {
   color: var(--ink);
 }
 
