@@ -9,6 +9,9 @@
 </head>
 <body data-section="home">
   <div class="water-stage" aria-hidden="true"></div>
+  <div class="page-scrollbar" aria-hidden="true">
+    <div class="page-scrollbar-thumb"></div>
+  </div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Pan Du home">www.panai4science.com</a>
     <nav class="site-nav" aria-label="Primary navigation">
@@ -218,6 +221,8 @@
     const navLinks = [...document.querySelectorAll("[data-nav-section]")];
     const pageSections = new Map(pageOrder.map((id) => [id, document.getElementById(id)]));
     const waterStage = document.querySelector(".water-stage");
+    const scrollbar = document.querySelector(".page-scrollbar");
+    const scrollbarThumb = document.querySelector(".page-scrollbar-thumb");
     const rootStyle = document.documentElement.style;
     const waterStep = 25;
     const waterScrollRatio = 1 / 3;
@@ -229,6 +234,24 @@
       const scrollTop = activeSection?.scrollTop ?? 0;
       rootStyle.setProperty("--water-y", `${-scrollTop * waterScrollRatio}px`);
       document.body.classList.toggle("is-content-scrolled", scrollTop > 24);
+      syncScrollbar();
+    };
+
+    const syncScrollbar = () => {
+      const activeSection = pageSections.get(pageOrder[activeIndex]);
+      if (!activeSection) return;
+
+      const maxScroll = Math.max(activeSection.scrollHeight - activeSection.clientHeight, 0);
+      const trackHeight = scrollbar.clientHeight;
+      const thumbHeight = maxScroll > 0
+        ? Math.max((activeSection.clientHeight / activeSection.scrollHeight) * trackHeight, 44)
+        : 0;
+      const maxThumbTop = Math.max(trackHeight - thumbHeight, 0);
+      const thumbTop = maxScroll > 0 ? (activeSection.scrollTop / maxScroll) * maxThumbTop : 0;
+
+      scrollbar.classList.toggle("is-visible", maxScroll > 0);
+      scrollbarThumb.style.height = `${thumbHeight}px`;
+      scrollbarThumb.style.transform = `translateY(${thumbTop}px)`;
     };
 
     const setActivePage = (sectionId, updateHash = true) => {
@@ -246,6 +269,7 @@
       rootStyle.setProperty("--active-index", nextIndex);
       rootStyle.setProperty("--water-x", `${nextWaterX}%`);
       rootStyle.setProperty("--water-y", "0px");
+      syncScrollbar();
 
       if (hasChangedPage) {
         waterStage.getAnimations().forEach((animation) => animation.cancel());
@@ -305,6 +329,8 @@
     window.addEventListener("hashchange", () => {
       setActivePage(location.hash.replace("#", "") || "home", false);
     });
+
+    window.addEventListener("resize", syncScrollbar);
 
     setActivePage(location.hash.replace("#", "") || "home", false);
     syncWaterVerticalPosition();
