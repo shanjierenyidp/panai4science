@@ -47,35 +47,35 @@ body {
 }
 
 body[data-section="about"] {
-  --page-bg: #f4f8f4;
+  --page-bg: #ffffff;
   --band-one: rgba(255, 255, 255, 0.9);
   --band-two: rgba(186, 218, 194, 0.58);
   --band-three: rgba(190, 218, 232, 0.48);
 }
 
 body[data-section="research"] {
-  --page-bg: #f2f8f9;
+  --page-bg: #ffffff;
   --band-one: rgba(255, 255, 255, 0.92);
   --band-two: rgba(170, 215, 230, 0.62);
   --band-three: rgba(211, 226, 188, 0.5);
 }
 
 body[data-section="publications"] {
-  --page-bg: #f8f6ee;
+  --page-bg: #ffffff;
   --band-one: rgba(255, 255, 255, 0.9);
   --band-two: rgba(232, 214, 172, 0.56);
   --band-three: rgba(190, 215, 230, 0.46);
 }
 
 body[data-section="teaching"] {
-  --page-bg: #f2f6f0;
+  --page-bg: #ffffff;
   --band-one: rgba(255, 255, 255, 0.9);
   --band-two: rgba(194, 220, 186, 0.58);
   --band-three: rgba(190, 218, 230, 0.46);
 }
 
 body[data-section="openings"] {
-  --page-bg: #f7f3ef;
+  --page-bg: #ffffff;
   --band-one: rgba(255, 255, 255, 0.9);
   --band-two: rgba(232, 202, 180, 0.56);
   --band-three: rgba(188, 216, 230, 0.46);
@@ -83,9 +83,9 @@ body[data-section="openings"] {
 
 body[data-section="contact"] {
   --page-bg: #ffffff;
-  --band-one: rgba(0, 253, 236, 0.9);
-  --band-two: rgba(226, 0, 170, 0.58);
-  --band-three: rgba(40, 208, 105, 0.46);
+  --band-one: rgba(255, 255, 255, 0.9);
+  --band-two: rgba(232, 202, 180, 0.56);
+  --band-three: rgba(188, 216, 230, 0.46);
 }
 
 .scroll-flow-bg {
@@ -115,19 +115,19 @@ body[data-section="contact"] {
 
 .flow-band-one {
   stroke: var(--band-one);
-  stroke-width: 200;
+  stroke-width: 600;
   transform: translate(var(--flow-one-x), var(--flow-one-y)) rotate(var(--flow-one-rotate));
 }
 
 .flow-band-two {
   stroke: var(--band-two);
-  stroke-width: 200;
+  stroke-width: 600;
   transform: translate(var(--flow-two-x), var(--flow-two-y)) rotate(var(--flow-two-rotate));
 }
 
 .flow-band-three {
   stroke: var(--band-three);
-  stroke-width: 200;
+  stroke-width: 600;
   transform: translate(var(--flow-three-x), var(--flow-three-y)) rotate(var(--flow-three-rotate));
 }
 
