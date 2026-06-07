@@ -473,9 +473,12 @@ li {
 }
 
 .cv-button {
+  align-self: center;
   justify-self: center;
-  width: min(280px, 100%);
-  min-height: 48px;
+  width: min(280px, 100%) !important;
+  height: 56px;
+  min-height: 0;
+  padding: 0 28px;
   font-size: clamp(1rem, 1.44vw, 1.2rem);
 }
 
