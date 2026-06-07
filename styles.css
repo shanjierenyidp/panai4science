@@ -115,19 +115,19 @@ body[data-section="contact"] {
 
 .flow-band-one {
   stroke: var(--band-one);
-  stroke-width: 630;
+  stroke-width: 200;
   transform: translate(var(--flow-one-x), var(--flow-one-y)) rotate(var(--flow-one-rotate));
 }
 
 .flow-band-two {
   stroke: var(--band-two);
-  stroke-width: 600;
+  stroke-width: 200;
   transform: translate(var(--flow-two-x), var(--flow-two-y)) rotate(var(--flow-two-rotate));
 }
 
 .flow-band-three {
   stroke: var(--band-three);
-  stroke-width: 570;
+  stroke-width: 200;
   transform: translate(var(--flow-three-x), var(--flow-three-y)) rotate(var(--flow-three-rotate));
 }
 
