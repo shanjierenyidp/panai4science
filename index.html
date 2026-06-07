@@ -8,54 +8,63 @@
   <link rel="preconnect" href="https://www.panai4science.com">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-section="home">
+  <div class="scroll-flow-bg" aria-hidden="true">
+    <svg class="flow-svg" viewBox="0 0 1600 1000" preserveAspectRatio="none">
+      <path class="flow-band flow-band-one" d="M 260 -180 C 185 70, 355 220, 300 420 C 245 620, 165 705, 225 910 C 275 1080, 220 1210, 165 1340"></path>
+      <path class="flow-band flow-band-two" d="M 610 -180 C 520 75, 700 245, 635 455 C 565 680, 735 810, 660 1035 C 620 1155, 640 1255, 720 1340"></path>
+      <path class="flow-band flow-band-three" d="M 980 -180 C 875 40, 1085 220, 1015 445 C 940 690, 850 760, 940 1010 C 985 1135, 940 1245, 860 1340"></path>
+    </svg>
+  </div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Pan Du home">
-      <span class="brand-mark">PD</span>
+      <img class="brand-logo" src="materials/logo.001.png" alt="">
       <span>Pan Du</span>
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#openings">Openings</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-nav-section="about">About</a>
+      <a href="#research" data-nav-section="research">Research</a>
+      <a href="#publications" data-nav-section="publications">Publications</a>
+      <a href="#teaching" data-nav-section="teaching">Teaching</a>
+      <a href="#openings" data-nav-section="openings">Openings</a>
+      <a href="#contact" data-nav-section="contact">Contact</a>
     </nav>
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">PHASE Lab | Iowa State University</p>
+    <section class="hero" data-section="home">
+      <div class="hero-content">
+        <img class="profile-photo" src="materials/photo.png" alt="Portrait of Pan Du">
         <h1>Pan Du</h1>
+        <div class="hero-rule" aria-hidden="true"></div>
         <p class="tagline">Exploring AI for health &amp; physics</p>
-        <p class="hero-summary">
-          Scientific machine learning, computational physics, and geometric modeling for scalable
-          many-query analysis and digital twins of PDE-governed systems.
-        </p>
-        <div class="hero-actions" aria-label="Key links">
-          <a class="button primary" href="#openings">PhD openings</a>
-          <a class="button" href="mailto:panai4health@berkeley.edu?subject=CV%20request">Request CV</a>
-        </div>
-      </div>
-      <div class="hero-panel" aria-label="Research focus">
-        <img class="profile-photo" src="materials/photo2.004.png" alt="Portrait of Pan Du">
-        <img class="focus-diagram" src="materials/front%20page.png" alt="Artificial intelligence, geometry modeling, and computational physics research focus diagram">
-        <div class="lab-card">
-          <p class="card-label">Beginning Fall 2027</p>
-          <h2>Physics &amp; Health via AI and Shape Emulation Lab</h2>
-          <p>PHASE Lab will advance AI and geometry technologies for physical and biomedical sciences.</p>
+        <div class="social-links" aria-label="Profile links">
+          <a href="http://www.panai4science.com" aria-label="Pan Du website">
+            <img src="materials/logo2.001.png" alt="">
+          </a>
+          <a href="https://www.linkedin.com/in/pan-du-33460a1a5/" rel="noopener" target="_blank" aria-label="LinkedIn">
+            <img src="materials/logo2.004.png" alt="">
+          </a>
+          <a href="https://scholar.google.com/citations?user=dQ-bcooAAAAJ&hl=en" rel="noopener" target="_blank" aria-label="Google Scholar">
+            <img src="materials/logo2.002.png" alt="">
+          </a>
+          <a href="https://www.researchgate.net/profile/Pan-Du-8" rel="noopener" target="_blank" aria-label="ResearchGate">
+            <img src="materials/logo2.003.png" alt="">
+          </a>
+          <a href="https://xhslink.com/m/9alb8WdASgg" rel="noopener" target="_blank" aria-label="Xiaohongshu">
+            <img src="materials/logo2.005.png" alt="">
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section two-column">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Computational science for biomedical and physical systems.</h2>
-      </div>
+    <section class="hiring-ad">
+      <a href="#openings">We are currently hiring PhD students at Department of Mechanical Engineering at Iowa State University</a>
+    </section>
+
+    <section id="about" class="section about-section" data-section="about">
       <div class="section-copy">
+        <h2>About</h2>
         <p>
           I am an incoming Assistant Professor in the Department of Mechanical Engineering at Iowa State
           University, where I will establish the Physics &amp; Health via AI and Shape Emulation (PHASE) Lab
@@ -76,13 +85,11 @@
           biomechanics to broader multi-physics problems.
         </p>
       </div>
+      <img class="focus-diagram" src="materials/front%20page.png" alt="Artificial intelligence, geometry modeling, and computational physics research focus diagram">
     </section>
 
-    <section id="research" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Research Projects</p>
-        <h2>AI, geometry, and simulation for patient-specific and multi-physics modeling.</h2>
-      </div>
+    <section id="research" class="section research-section" data-section="research">
+      <h2>Research projects</h2>
       <div class="research-grid">
         <article class="research-card">
           <div class="research-visual visual-one">
@@ -129,7 +136,7 @@
       </div>
     </section>
 
-    <section id="publications" class="section publications">
+    <section id="publications" class="section publications" data-section="publications">
       <div class="section-heading">
         <p class="eyebrow">Publications</p>
         <h2>Selected manuscripts, papers, talks, awards, and service.</h2>
@@ -203,7 +210,7 @@
       </div>
     </section>
 
-    <section id="teaching" class="section two-column soft-band">
+    <section id="teaching" class="section two-column soft-band" data-section="teaching">
       <div>
         <p class="eyebrow">Teaching</p>
         <h2>Teaching materials and course information will be added here.</h2>
@@ -214,7 +221,7 @@
       </p>
     </section>
 
-    <section id="openings" class="section openings">
+    <section id="openings" class="section openings" data-section="openings">
       <div>
         <p class="eyebrow">Openings</p>
         <h2>We are hiring PhD students.</h2>
@@ -226,7 +233,7 @@
       <a class="button primary" href="mailto:panai4health@berkeley.edu?subject=Prospective%20PhD%20student%20in%20PHASE%20Lab">Contact about openings</a>
     </section>
 
-    <section id="contact" class="section contact-grid">
+    <section id="contact" class="section contact-grid" data-section="contact">
       <div>
         <p class="eyebrow">Contact</p>
         <h2>Get in touch.</h2>
@@ -244,5 +251,97 @@
     <p>&copy; 2026 Pan Du. Built for GitHub Pages.</p>
     <a href="#home">Back to top</a>
   </footer>
+  <script>
+    document.documentElement.classList.add("js-enabled");
+
+    const sections = [...document.querySelectorAll("[data-section]")];
+    const navLinks = [...document.querySelectorAll("[data-nav-section]")];
+    const rootStyle = document.documentElement.style;
+    const revealTargets = [
+      ".hero-content > *",
+      ".section > *",
+      ".research-card",
+      ".content-stack > *"
+    ];
+
+    document.querySelectorAll(revealTargets.join(",")).forEach((element, index) => {
+      element.classList.add("reveal");
+      element.style.setProperty("--reveal-delay", `${Math.min(index % 8, 6) * 55}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    const navTargets = navLinks
+      .map((link) => ({
+        link,
+        section: document.querySelector(link.getAttribute("href"))
+      }))
+      .filter((item) => item.section);
+
+    let scrollFrameRequested = false;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const setScrollFrame = () => {
+      scrollFrameRequested = false;
+
+      const maxScroll = Math.max(
+        document.documentElement.scrollHeight - window.innerHeight,
+        1
+      );
+      const progress = clamp(window.scrollY / maxScroll, 0, 1);
+      const waveOne = Math.sin(progress * Math.PI * 2);
+      const waveTwo = Math.sin(progress * Math.PI * 2 + 1.1);
+      const waveThree = Math.sin(progress * Math.PI * 2 + 2.2);
+
+      rootStyle.setProperty("--flow-one-x", `${waveOne * 26}px`);
+      rootStyle.setProperty("--flow-one-y", `${-95 + progress * 190}px`);
+      rootStyle.setProperty("--flow-one-rotate", `${waveOne * 0.35}deg`);
+      rootStyle.setProperty("--flow-two-x", `${waveTwo * -34}px`);
+      rootStyle.setProperty("--flow-two-y", `${-135 + progress * 250}px`);
+      rootStyle.setProperty("--flow-two-rotate", `${waveTwo * -0.42}deg`);
+      rootStyle.setProperty("--flow-three-x", `${waveThree * 22}px`);
+      rootStyle.setProperty("--flow-three-y", `${-70 + progress * 150}px`);
+      rootStyle.setProperty("--flow-three-rotate", `${waveThree * 0.28}deg`);
+
+      const headerOffset = document.querySelector(".site-header")?.offsetHeight ?? 0;
+      const activeLine = window.scrollY + headerOffset + window.innerHeight * 0.32;
+      let activeSection = "home";
+
+      navTargets.forEach(({ section }) => {
+        if (section.offsetTop <= activeLine) {
+          activeSection = section.id;
+        }
+      });
+
+      const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (nearBottom && navTargets.length) {
+        activeSection = navTargets[navTargets.length - 1].section.id;
+      }
+
+      document.body.dataset.section = activeSection;
+      navTargets.forEach(({ link, section }) => {
+        link.classList.toggle("is-active", section.id === activeSection);
+      });
+    };
+
+    const requestScrollFrame = () => {
+      if (scrollFrameRequested) return;
+      scrollFrameRequested = true;
+      requestAnimationFrame(setScrollFrame);
+    };
+
+    setScrollFrame();
+    window.addEventListener("scroll", requestScrollFrame, { passive: true });
+    window.addEventListener("resize", requestScrollFrame);
+  </script>
 </body>
 </html>
