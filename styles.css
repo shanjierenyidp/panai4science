@@ -860,8 +860,15 @@ li {
 
   .brand {
     gap: 6px;
-    font-size: 0.56rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: clamp(0.66rem, 2.8vw, 0.88rem);
     letter-spacing: 0.03em;
+  }
+
+  .brand span {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand img {
@@ -870,6 +877,7 @@ li {
   }
 
   .language-toggle {
+    flex: 0 0 auto;
     font-size: 0.68rem;
   }
 
@@ -882,6 +890,10 @@ li {
   .site-nav {
     grid-template-columns: 1fr;
     font-size: 0.74rem;
+  }
+
+  .nav-toggle {
+    flex: 0 0 40px;
   }
 
   .profile-photo {
