@@ -183,6 +183,7 @@ body.is-content-scrolled .brand {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px 14px;
+  margin-left: auto;
   font-size: clamp(0.77rem, 1.04vw, 0.98rem);
 }
 
@@ -754,10 +755,16 @@ li {
 
   .nav-toggle {
     display: inline-flex;
+    order: 3;
+  }
+
+  .language-toggle {
+    order: 2;
     margin-left: auto;
   }
 
   .site-nav {
+    order: 4;
     position: absolute;
     top: calc(100% - 2px);
     right: clamp(18px, 4vw, 42px);
@@ -806,11 +813,6 @@ li {
 
   .site-nav a + a::before {
     content: none;
-  }
-
-  .language-toggle {
-    grid-column: 1 / -1;
-    justify-self: start;
   }
 
   .page-banner {
