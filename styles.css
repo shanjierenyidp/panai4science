@@ -436,9 +436,12 @@ h1 {
 }
 
 .hero-name-zh {
-  display: inline-block;
   letter-spacing: 0.5em;
-  transform: translateX(0.25em);
+  margin-right: -0.5em;
+}
+
+body[data-lang="zh"] .hero-name-zh {
+  display: inline-block;
 }
 
 h2 {
