@@ -7,7 +7,7 @@
   <title>Pan Du | AI for Health &amp; Physics</title>
   <link rel="icon" type="image/png" href="materials/logo2.001.png">
   <link rel="apple-touch-icon" href="materials/logo2.001.png">
-  <link rel="stylesheet" href="styles.css?v=20260607-header-logo">
+  <link rel="stylesheet" href="styles.css?v=20260607-back-top">
 </head>
 <body data-section="home" data-lang="en">
   <div class="water-stage" aria-hidden="true"></div>
@@ -19,6 +19,11 @@
       <img src="materials/logo.001.png" alt="" width="34" height="34">
       <span>www.panai4science.com</span>
     </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#home" data-nav-section="home"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
       <a href="#news" data-nav-section="news"><span class="lang-en">News</span><span class="lang-zh">动态</span></a>
@@ -31,6 +36,11 @@
       </button>
     </nav>
   </header>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+    <span class="lang-en">Top</span>
+    <span class="lang-zh">顶部</span>
+  </button>
 
   <main>
     <section id="home" class="page-section home-section" data-section="home">
@@ -152,6 +162,10 @@
         </div>
         <a class="button cv-button" href="materials/CV_04292026.pdf" download><span class="lang-en">Download CV</span><span class="lang-zh">下载简历</span></a>
       </div>
+      <footer class="site-footer">
+        <p><span class="lang-en">&copy; 2026 Pan Du. All rights reserved.</span><span class="lang-zh">&copy; 2026 杜攀。保留所有权利。</span></p>
+        <p><span class="lang-en">Last updated: June 7, 2026</span><span class="lang-zh">最后更新：2026 年 6 月 7 日</span></p>
+      </footer>
     </section>
 
     <section id="news" class="page-section" data-section="news">
@@ -182,6 +196,10 @@
 
         </ul>
       </div>
+      <footer class="site-footer">
+        <p><span class="lang-en">&copy; 2026 Pan Du. All rights reserved.</span><span class="lang-zh">&copy; 2026 杜攀。保留所有权利。</span></p>
+        <p><span class="lang-en">Last updated: June 7, 2026</span><span class="lang-zh">最后更新：2026 年 6 月 7 日</span></p>
+      </footer>
     </section>
 
     <section id="publications" class="page-section" data-section="publications">
@@ -236,6 +254,10 @@
           </ol>
         </article>
       </div>
+      <footer class="site-footer">
+        <p><span class="lang-en">&copy; 2026 Pan Du. All rights reserved.</span><span class="lang-zh">&copy; 2026 杜攀。保留所有权利。</span></p>
+        <p><span class="lang-en">Last updated: June 7, 2026</span><span class="lang-zh">最后更新：2026 年 6 月 7 日</span></p>
+      </footer>
     </section>
 
     <section id="teaching" class="page-section" data-section="teaching">
@@ -265,6 +287,10 @@
           <span class="quote-mark" aria-hidden="true">"</span>
         </blockquote>
       </div>
+      <footer class="site-footer">
+        <p><span class="lang-en">&copy; 2026 Pan Du. All rights reserved.</span><span class="lang-zh">&copy; 2026 杜攀。保留所有权利。</span></p>
+        <p><span class="lang-en">Last updated: June 7, 2026</span><span class="lang-zh">最后更新：2026 年 6 月 7 日</span></p>
+      </footer>
     </section>
 
     <section id="openings" class="page-section" data-section="openings">
@@ -285,6 +311,10 @@
           </p>
         </object>
       </div>
+      <footer class="site-footer">
+        <p><span class="lang-en">&copy; 2026 Pan Du. All rights reserved.</span><span class="lang-zh">&copy; 2026 杜攀。保留所有权利。</span></p>
+        <p><span class="lang-en">Last updated: June 7, 2026</span><span class="lang-zh">最后更新：2026 年 6 月 7 日</span></p>
+      </footer>
     </section>
   </main>
 
@@ -295,7 +325,9 @@
     const waterStage = document.querySelector(".water-stage");
     const scrollbar = document.querySelector(".page-scrollbar");
     const scrollbarThumb = document.querySelector(".page-scrollbar-thumb");
+    const navToggle = document.querySelector(".nav-toggle");
     const languageToggle = document.querySelector(".language-toggle");
+    const backToTop = document.querySelector(".back-to-top");
     const rootStyle = document.documentElement.style;
     const waterStep = 25;
     const waterScrollRatio = 1 / 3;
@@ -343,6 +375,26 @@
 
     setLanguage(languageStore.get() || "en");
 
+    const setNavOpen = (isOpen) => {
+      document.body.classList.toggle("is-nav-open", isOpen);
+      navToggle?.setAttribute("aria-expanded", String(isOpen));
+      navToggle?.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    };
+
+    navToggle?.addEventListener("click", () => {
+      setNavOpen(!document.body.classList.contains("is-nav-open"));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!document.body.classList.contains("is-nav-open")) return;
+      if (event.target.closest(".site-header")) return;
+      setNavOpen(false);
+    });
+
+    backToTop?.addEventListener("click", () => {
+      pageSections.get(pageOrder[activeIndex])?.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     const syncWaterVerticalPosition = () => {
       const activeSection = pageSections.get(pageOrder[activeIndex]);
       const scrollTop = activeSection?.scrollTop ?? 0;
@@ -380,6 +432,7 @@
       currentWaterX = nextWaterX;
       document.body.dataset.section = sectionId;
       document.body.classList.remove("is-content-scrolled");
+      setNavOpen(false);
       rootStyle.setProperty("--active-index", nextIndex);
       rootStyle.setProperty("--water-x", `${nextWaterX}%`);
       rootStyle.setProperty("--water-y", "0px");
@@ -423,6 +476,11 @@
     });
 
     window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setNavOpen(false);
+        return;
+      }
+
       if (event.key === "ArrowRight") {
         setActivePage(pageOrder[Math.min(activeIndex + 1, pageOrder.length - 1)]);
       }
