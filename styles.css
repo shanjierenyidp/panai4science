@@ -853,13 +853,30 @@ li {
     --banner-height: 500px;
   }
 
+  .site-header {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
   .brand {
-    font-size: 0.8rem;
+    gap: 6px;
+    font-size: 0.56rem;
+    letter-spacing: 0.03em;
   }
 
   .brand img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .language-toggle {
+    font-size: 0.68rem;
+  }
+
+  .language-toggle span {
+    min-width: 36px;
+    min-height: 24px;
+    padding: 0 7px;
   }
 
   .site-nav {
