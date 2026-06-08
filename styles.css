@@ -435,6 +435,12 @@ h1 {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
+.hero-name-zh {
+  display: inline-block;
+  letter-spacing: 0.5em;
+  transform: translateX(0.25em);
+}
+
 h2 {
   margin: 0 0 40px;
   color: var(--gold);
