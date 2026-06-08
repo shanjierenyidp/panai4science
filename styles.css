@@ -859,7 +859,7 @@ li {
 
 @media (max-width: 620px) {
   :root {
-    --banner-height: clamp(640px, 86svh, 700px);
+    --banner-height: clamp(560px, 76svh, 620px);
   }
 
   .site-header {
@@ -911,16 +911,17 @@ li {
 
   .home-banner {
     place-items: start center;
+    align-content: start;
   }
 
   .home-hero {
-    gap: 14px;
-    padding-top: 112px;
+    gap: 12px;
+    padding-top: 76px;
   }
 
   .tagline {
     max-width: min(360px, 94vw);
-    font-size: clamp(1rem, 5.8vw, 1.28rem);
+    font-size: clamp(0.96rem, 5.2vw, 1.18rem);
   }
 
   .social-links {
@@ -928,7 +929,7 @@ li {
   }
 
   .social-links a {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
 }
