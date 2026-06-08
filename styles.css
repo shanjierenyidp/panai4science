@@ -859,7 +859,7 @@ li {
 
 @media (max-width: 620px) {
   :root {
-    --banner-height: clamp(660px, 92svh, 740px);
+    --banner-height: clamp(640px, 86svh, 700px);
   }
 
   .site-header {
@@ -909,9 +909,13 @@ li {
     width: min(220px, 78vw);
   }
 
+  .home-banner {
+    place-items: start center;
+  }
+
   .home-hero {
     gap: 14px;
-    padding-top: 72px;
+    padding-top: 112px;
   }
 
   .tagline {
