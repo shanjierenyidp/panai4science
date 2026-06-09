@@ -666,6 +666,15 @@ li {
   display: block;
 }
 
+.contact-content address .lang-zh,
+body[data-lang="zh"] .contact-content address .lang-en {
+  display: none;
+}
+
+body[data-lang="zh"] .contact-content address .lang-zh {
+  display: block;
+}
+
 .cv-button {
   align-self: center;
   justify-self: center;
