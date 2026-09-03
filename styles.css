@@ -412,6 +412,8 @@ main {
   display: block;
   width: min(320px, 80vw);
   height: auto;
+  aspect-ratio: 1;
+  justify-self: center;
   border: 0;
   border-radius: 0;
   object-fit: contain;
@@ -926,6 +928,7 @@ body[data-lang="zh"] .contact-content address .lang-zh {
   .home-hero {
     gap: 6px;
     padding-top: 36px;
+    transform: translateY(-8px);
   }
 
   .tagline {
@@ -935,7 +938,6 @@ body[data-lang="zh"] .contact-content address .lang-zh {
 
   .social-links {
     gap: 10px;
-    transform: translateY(-8px);
   }
 
   .social-links a {
