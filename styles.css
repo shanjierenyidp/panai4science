@@ -5,7 +5,7 @@
   --bar-gold: #d7b14a;
   --white: #ffffff;
   --line: #d8d8d8;
-  --banner-height: 700px;
+  --banner-height: 620px;
   --water-x: 0%;
   --water-y: 0px;
 }
@@ -400,7 +400,6 @@ main {
 }
 
 .home-hero {
-  width: 100%;
   gap: 18px;
   padding-top: 40px;
 }
@@ -411,12 +410,10 @@ main {
 
 .profile-photo {
   display: block;
-  width: min(600px, 82vw);
+  width: min(320px, 80vw);
   height: auto;
-  margin-inline: auto;
   border: 0;
   border-radius: 0;
-  justify-self: center;
   object-fit: contain;
   object-position: center;
 }
@@ -765,11 +762,7 @@ body[data-lang="zh"] .contact-content address .lang-zh {
 
 @media (max-width: 960px) {
   :root {
-    --banner-height: 620px;
-  }
-
-  .profile-photo {
-    width: min(440px, 76vw);
+    --banner-height: 540px;
   }
 
   .site-header {
@@ -875,7 +868,7 @@ body[data-lang="zh"] .contact-content address .lang-zh {
 
 @media (max-width: 620px) {
   :root {
-    --banner-height: clamp(560px, 76svh, 640px);
+    --banner-height: clamp(480px, 68svh, 560px);
   }
 
   .site-header {
@@ -922,7 +915,7 @@ body[data-lang="zh"] .contact-content address .lang-zh {
   }
 
   .profile-photo {
-    width: min(320px, 76vw);
+    width: min(220px, 78vw);
   }
 
   .home-banner {
