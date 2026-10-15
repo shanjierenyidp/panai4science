@@ -515,6 +515,11 @@ li {
   width: 100%;
 }
 
+.publications-content ol {
+  padding-left: 0;
+  list-style: none;
+}
+
 .publications-content article + article {
   margin-top: 36px;
 }
