@@ -7,7 +7,7 @@
   <title>PHASE Lab | Iowa State University</title>
   <link rel="icon" type="image/png" href="materials/lablogov2_only.png">
   <link rel="apple-touch-icon" href="materials/lablogov2_only.png">
-  <link rel="stylesheet" href="styles.css?v=20261014-lab-redesign">
+  <link rel="stylesheet" href="styles.css?v=20261014-courses">
 </head>
 <body data-section="home" data-lang="en">
   <div class="water-stage" aria-hidden="true"></div>
@@ -28,6 +28,7 @@
       <a href="#research" data-nav-section="research">Research</a>
       <a href="#team" data-nav-section="team">Team</a>
       <a href="#publications" data-nav-section="publications">Publications</a>
+      <a href="#courses" data-nav-section="courses">Courses</a>
       <a href="#openings" data-nav-section="openings">Openings</a>
     </nav>
     <a class="isu-link" href="https://www.iastate.edu/" target="_blank" rel="noopener" aria-label="Iowa State University">
@@ -223,6 +224,24 @@
       </footer>
     </section>
 
+    <section id="courses" class="page-section" data-section="courses">
+      <div class="content-section courses-content">
+        <h2>Courses</h2>
+        <article class="course-card">
+          <img src="materials/course_page.jpeg" alt="Course cover for Introduction to Artificial Intelligence">
+          <div>
+            <h3>AME 40411: Introduction to Artificial Intelligence</h3>
+            <p>Course Instructor · Undergraduate level · Fall 2025 · 3 credits</p>
+            <a class="button" href="mailto:panai4health@berkeley.edu?subject=AME40411%20syllabus">Request syllabus</a>
+          </div>
+        </article>
+      </div>
+      <footer class="site-footer">
+        <p>&copy; 2026 PHASE Lab. All rights reserved.</p>
+        <p>Iowa State University</p>
+      </footer>
+    </section>
+
     <section id="openings" class="page-section" data-section="openings">
       <div class="content-section openings-content">
         <p><span class="lang-en">We are currently hiring highly motivated PhD students. Please see details in the hiring ad below. Applicants are encouraged to submit their materials via the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfh0YpuAR_bXnEJogj-pq8EV77GbSH5RysPODNLEMwJ-yWdew/viewform?usp=header" target="_blank" rel="noopener noreferrer">Google Form</a>. If the form is not accessible, please send your application materials by email to <a href="mailto:panai4health@berkeley.edu">panai4health@berkeley.edu</a>.</span><span class="lang-zh">我们正在招收积极主动的博士生，具体信息请见下方招生广告。申请人请优先通过<a href="https://docs.google.com/forms/d/e/1FAIpQLSfh0YpuAR_bXnEJogj-pq8EV77GbSH5RysPODNLEMwJ-yWdew/viewform?usp=header" target="_blank" rel="noopener noreferrer">谷歌表单</a>提交申请材料。如无法访问该表单，请将申请材料发送至 <a href="mailto:panai4health@berkeley.edu">panai4health@berkeley.edu</a>。</span></p>
@@ -243,7 +262,7 @@
   </main>
 
   <script>
-    const pageOrder = ["home", "research", "team", "publications", "openings"];
+    const pageOrder = ["home", "research", "team", "publications", "courses", "openings"];
     const navLinks = [...document.querySelectorAll("[data-nav-section]")];
     const pageSections = new Map(pageOrder.map((id) => [id, document.getElementById(id)]));
     const waterStage = document.querySelector(".water-stage");
