@@ -1029,7 +1029,8 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
 .team-group { margin-top:46px; }
 .team-group-title { margin:0 0 24px; padding-bottom:12px; border-bottom:1px solid var(--phase-line); color:var(--phase-red); font-size:1.15rem; font-weight:750; }
 .team-card { display:grid; grid-template-columns:230px minmax(0,620px); gap:42px; align-items:start; }
-.team-card>img { display:block; width:230px; height:auto; object-fit:contain; object-position:center top; }
+.team-photo-frame { width:230px; aspect-ratio:1; padding:12px; box-sizing:border-box; overflow:visible; }
+.team-photo-frame img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; }
 .team-card h3 { margin:0 0 6px; font-size:1.8rem; }
 .team-card p { font-size:1rem; }
 .team-role { margin:0 0 18px; color:var(--phase-red); font-weight:750; }
@@ -1043,6 +1044,25 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
 .course-card p { margin:0 0 28px; font-size:1rem; }
 .course-card .button { width:auto; padding:0 28px; }
 .button { background:var(--phase-red); }
+.openings-content {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:clamp(36px,5vw,68px);
+  width:100%;
+  min-height:500px;
+  padding-right:max(24px,calc((100% - 1380px)/2));
+  padding-left:max(24px,calc((100% - 1380px)/2));
+}
+.openings-content>p {
+  width:min(1040px,100%);
+  max-width:1040px;
+  margin:0 auto;
+  text-align:center;
+  text-wrap:balance;
+}
+.openings-content>.flyer-button { flex:0 0 auto; margin-inline:auto; }
+.openings-content>.flyer-frame { display:block; align-self:center; margin-inline:auto; }
 .site-footer { border-top:1px solid var(--phase-line); }
 
 @media (max-width:960px) {
@@ -1060,7 +1080,7 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
   .page-section { height:calc(100svh - 82px); }
   .about-content { grid-template-columns:1fr; }
   .team-card { grid-template-columns:180px 1fr; gap:28px; }
-  .team-card>img { width:180px; height:auto; }
+  .team-photo-frame { width:180px; padding:10px; }
   .course-card { grid-template-columns:1fr; }
   .course-card>img { max-width:520px; }
 }
@@ -1083,5 +1103,6 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
   .news-arrow-prev { left:10px; }
   .news-arrow-next { right:10px; }
   .team-card { grid-template-columns:1fr; }
-  .team-card>img { width:190px; height:auto; }
+  .team-photo-frame { width:190px; padding:10px; }
+  .openings-content { padding-right:20px; padding-left:20px; }
 }
