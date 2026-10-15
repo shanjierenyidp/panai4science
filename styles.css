@@ -872,8 +872,8 @@ body.is-content-scrolled .site-header {
   box-shadow:none;
   backdrop-filter:blur(10px);
 }
-.brand { flex:0 1 410px; color:var(--phase-ink); text-shadow:none; }
-.brand img { width:min(410px,34vw); height:auto; max-height:86px; object-fit:contain; object-position:left center; }
+.brand { flex:0 1 390px; color:var(--phase-ink); text-shadow:none; }
+.brand img { width:min(390px,33vw); height:auto; max-height:82px; object-fit:contain; object-position:left center; }
 .site-nav { flex-wrap:nowrap; align-items:center; gap:clamp(18px,2.3vw,38px); margin-left:auto; }
 .site-nav a,
 body.is-content-scrolled .site-nav a { color:#303030; font-size:1rem; font-weight:600; letter-spacing:.02em; text-shadow:none; }
