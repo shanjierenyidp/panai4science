@@ -862,8 +862,10 @@ body { color:var(--phase-ink); background:#fff; }
 .water-stage,.page-banner,.hiring-ad { display:none !important; }
 .site-header,
 body.is-content-scrolled .site-header {
+  box-sizing:border-box;
+  height:104px;
   min-height:104px;
-  padding:14px max(28px,calc((100vw - 1380px)/2));
+  padding:8px max(28px,calc((100vw - 1380px)/2));
   color:var(--phase-ink);
   background:rgba(255,255,255,.97);
   border-bottom:1px solid var(--phase-line);
@@ -1016,7 +1018,7 @@ h2 { color:var(--phase-ink); font-size:clamp(1.7rem,2.2vw,1.95rem); font-weight:
 .footer-contact a:hover { color:#fff; text-decoration:underline; }
 
 @media (max-width:960px) {
-  .site-header,body.is-content-scrolled .site-header { min-height:82px; padding:10px 18px; }
+  .site-header,body.is-content-scrolled .site-header { height:82px; min-height:82px; padding:10px 18px; }
   .brand { flex-basis:230px; }
   .brand img { width:min(230px,48vw); max-height:58px; }
   .isu-link { order:2; margin-left:auto; padding-left:12px; }
@@ -1038,7 +1040,7 @@ h2 { color:var(--phase-ink); font-size:clamp(1.7rem,2.2vw,1.95rem); font-weight:
 }
 
 @media (max-width:620px) {
-  .site-header,body.is-content-scrolled .site-header { gap:8px; min-height:72px; padding:8px 12px; }
+  .site-header,body.is-content-scrolled .site-header { gap:8px; height:72px; min-height:72px; padding:8px 12px; }
   .brand { flex-basis:auto; }
   .brand img { width:min(190px,46vw); max-height:48px; }
   .isu-link { padding-left:8px; }
