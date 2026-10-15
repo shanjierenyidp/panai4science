@@ -33,15 +33,6 @@ body {
   line-height: 1.65;
 }
 
-.lang-zh,
-body[data-lang="zh"] .lang-en {
-  display: none;
-}
-
-body[data-lang="zh"] .lang-zh {
-  display: revert;
-}
-
 .page-scrollbar {
   position: fixed;
   top: 0;
@@ -219,62 +210,6 @@ body.is-content-scrolled .site-nav a.is-active {
   color: var(--ink);
 }
 
-.language-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  padding: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 999px;
-  color: rgba(255, 255, 255, 0.86);
-  background: rgba(255, 255, 255, 0.12);
-  font: inherit;
-  font-weight: 700;
-  line-height: inherit;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-}
-
-.language-toggle span {
-  display: inline-flex;
-  min-width: 46px;
-  min-height: 26px;
-  align-items: center;
-  justify-content: center;
-  padding: 0 9px;
-  border-radius: 999px;
-  transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.language-toggle::before,
-.language-toggle span:first-child::after {
-  content: none;
-}
-
-body.is-content-scrolled .language-toggle {
-  border-color: rgba(17, 17, 17, 0.14);
-  color: rgba(17, 17, 17, 0.78);
-  background: rgba(255, 255, 255, 0.7);
-  text-shadow: none;
-}
-
-body[data-lang="en"] .language-toggle span:first-child,
-body[data-lang="zh"] .language-toggle span:last-child {
-  color: var(--white);
-  background: rgba(17, 17, 17, 0.72);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-}
-
-body.is-content-scrolled[data-lang="en"] .language-toggle span:first-child,
-body.is-content-scrolled[data-lang="zh"] .language-toggle span:last-child {
-  color: var(--white);
-  background: var(--ink);
-}
-
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -435,15 +370,6 @@ h1 {
   line-height: 1;
   letter-spacing: 0;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-}
-
-.hero-name-zh {
-  letter-spacing: 0.5em;
-  margin-right: -0.5em;
-}
-
-body[data-lang="zh"] .hero-name-zh {
-  display: inline-block;
 }
 
 h2 {
@@ -668,15 +594,6 @@ li {
   display: block;
 }
 
-.contact-content address .lang-zh,
-body[data-lang="zh"] .contact-content address .lang-en {
-  display: none;
-}
-
-body[data-lang="zh"] .contact-content address .lang-zh {
-  display: block;
-}
-
 .cv-button {
   align-self: center;
   justify-self: center;
@@ -780,11 +697,6 @@ body[data-lang="zh"] .contact-content address .lang-zh {
   .nav-toggle {
     display: inline-flex;
     order: 3;
-  }
-
-  .language-toggle {
-    order: 2;
-    margin-left: auto;
   }
 
   .site-nav {
@@ -900,17 +812,6 @@ body[data-lang="zh"] .contact-content address .lang-zh {
     height: 28px;
   }
 
-  .language-toggle {
-    flex: 0 0 auto;
-    font-size: 0.68rem;
-  }
-
-  .language-toggle span {
-    min-width: 36px;
-    min-height: 24px;
-    padding: 0 7px;
-  }
-
   .site-nav {
     grid-template-columns: 1fr;
     font-size: 0.74rem;
@@ -953,7 +854,7 @@ body[data-lang="zh"] .contact-content address .lang-zh {
 /* PHASE Lab institutional layout */
 :root { --phase-red:#c8102e; --phase-ink:#181818; --phase-line:#dedede; }
 body { color:var(--phase-ink); background:#fff; }
-.water-stage,.page-banner,.hiring-ad,.language-toggle { display:none !important; }
+.water-stage,.page-banner,.hiring-ad { display:none !important; }
 .site-header,
 body.is-content-scrolled .site-header {
   min-height:104px;
