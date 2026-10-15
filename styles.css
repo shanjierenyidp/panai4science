@@ -909,7 +909,7 @@ body[data-section="openings"] #openings { display:block; }
 .news-slide-copy { position:absolute; z-index:2; bottom:clamp(48px,8vw,104px); left:max(64px,calc((100vw - 1380px)/2)); width:min(1080px,calc(100% - 160px)); color:#fff; }
 .news-slide-copy span { display:block; margin-bottom:14px; color:#f1be48; font-size:.78rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
 .news-slide-copy h1 { margin:0; max-width:1040px; color:#fff; font-size:clamp(1.55rem,2.15vw,1.8rem); font-weight:600; line-height:1.18; text-shadow:0 2px 16px rgba(0,0,0,.35); }
-.news-arrow { position:absolute; z-index:3; top:50%; display:grid; width:48px; height:48px; place-items:center; border:1px solid rgba(255,255,255,.7); border-radius:50%; color:#fff; background:rgba(0,0,0,.3); font-size:1.35rem; cursor:pointer; transform:translateY(-50%); }
+.news-arrow { position:absolute; z-index:3; top:50%; display:grid; width:48px; height:48px; place-items:center; border:1px solid rgba(255,255,255,.7); border-radius:50%; color:#fff; background:rgba(0,0,0,.3); font-family:Arial,sans-serif; font-size:1.75rem; font-weight:700; line-height:1; cursor:pointer; transform:translateY(-50%); }
 .news-arrow:hover { background:var(--phase-red); }
 .news-arrow-prev { left:20px; }
 .news-arrow-next { right:20px; }
