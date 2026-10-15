@@ -1007,7 +1007,10 @@ body[data-section="openings"] #openings { display:block; }
 .news-dots { position:absolute; z-index:3; right:0; bottom:22px; left:0; display:flex; justify-content:center; gap:9px; }
 .news-dots button { width:30px; height:4px; padding:0; border:0; background:rgba(255,255,255,.48); cursor:pointer; }
 .news-dots button.is-active { background:#fff; }
-.about-content { grid-template-columns:minmax(320px,.9fr) minmax(360px,1.1fr); }
+.about-content { grid-template-columns:minmax(360px,1.1fr) minmax(300px,.9fr); align-items:center; }
+.about-content .text-block p { max-width:720px; margin:0; font-size:clamp(1.08rem,1.4vw,1.24rem); line-height:1.75; text-align:left; }
+.about-content .text-block strong { color:var(--phase-red); font-weight:750; }
+.about-content .focus-diagram { width:min(480px,100%); margin:0 auto; }
 h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; }
 .about-content h2::after,.home-news>h2::after,.research-page-content>h2::after,.team-content>h2::after,.publications-content>h2::after,.courses-content>h2::after { display:block; width:56px; height:4px; margin-top:16px; background:var(--phase-red); content:""; }
 .home-news { border-top:1px solid var(--phase-line); }
