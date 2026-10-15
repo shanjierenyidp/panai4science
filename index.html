@@ -7,7 +7,7 @@
   <title>PHASE Lab | Iowa State University</title>
   <link rel="icon" type="image/png" href="materials/lablogov2_only.png">
   <link rel="apple-touch-icon" href="materials/lablogov2_only.png">
-  <link rel="stylesheet" href="styles.css?v=20261015-mission-news">
+  <link rel="stylesheet" href="styles.css?v=20261015-carousel-refine">
 </head>
 <body data-section="home" data-lang="en">
   <div class="water-stage" aria-hidden="true"></div>
@@ -48,11 +48,11 @@
           <img src="materials/bannar_1.jpg" alt="DiFVM differentiable computational fluid dynamics platform">
           <div class="news-slide-copy"><span>Featured Research</span><h1>DiFVM builds a differentiable platform for CFD on unstructured meshes.</h1></div>
         </article>
-        <article class="news-slide" data-news-slide hidden>
+        <article class="news-slide is-after" data-news-slide aria-hidden="true">
           <img src="materials/banner_2.jpg" alt="Gallery of generated aortic geometries">
           <div class="news-slide-copy"><span>Featured Research</span><h1>A large gallery of aortic geometries enables data-driven vascular modeling.</h1></div>
         </article>
-        <article class="news-slide" data-news-slide hidden>
+        <article class="news-slide is-after" data-news-slide aria-hidden="true">
           <img src="materials/banner_3.png" alt="Bayesian inference for discovering unknown physics">
           <div class="news-slide-copy"><span>Featured Research</span><h1>Bayesian inference reveals unknown physics from sparse observations.</h1></div>
         </article>
@@ -284,14 +284,19 @@
     let currentWaterX = 0;
     let activeNewsSlide = 0;
 
-    const showNewsSlide = (index) => {
+    const showNewsSlide = (index, direction = 1) => {
       if (!newsSlides.length) return;
-      activeNewsSlide = (index + newsSlides.length) % newsSlides.length;
+      const previousNewsSlide = activeNewsSlide;
+      const nextNewsSlide = (index + newsSlides.length) % newsSlides.length;
+      if (nextNewsSlide === previousNewsSlide) return;
       newsSlides.forEach((slide, slideIndex) => {
-        const isActive = slideIndex === activeNewsSlide;
-        slide.hidden = !isActive;
+        const isActive = slideIndex === nextNewsSlide;
+        slide.classList.remove("is-active", "is-before", "is-after");
         slide.classList.toggle("is-active", isActive);
+        if (!isActive) slide.classList.add(slideIndex === previousNewsSlide ? (direction > 0 ? "is-before" : "is-after") : (direction > 0 ? "is-after" : "is-before"));
+        slide.setAttribute("aria-hidden", String(!isActive));
       });
+      activeNewsSlide = nextNewsSlide;
       newsDots.forEach((dot, dotIndex) => {
         const isActive = dotIndex === activeNewsSlide;
         dot.classList.toggle("is-active", isActive);
@@ -299,9 +304,12 @@
       });
     };
 
-    document.querySelector("[data-news-prev]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide - 1));
-    document.querySelector("[data-news-next]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide + 1));
-    newsDots.forEach((dot) => dot.addEventListener("click", () => showNewsSlide(Number(dot.dataset.newsDot))));
+    document.querySelector("[data-news-prev]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide - 1, -1));
+    document.querySelector("[data-news-next]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide + 1, 1));
+    newsDots.forEach((dot) => dot.addEventListener("click", () => {
+      const target = Number(dot.dataset.newsDot);
+      showNewsSlide(target, target > activeNewsSlide ? 1 : -1);
+    }));
 
     const languageStore = {
       get() {
