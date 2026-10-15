@@ -1038,11 +1038,14 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
 .team-empty-state p { margin:0 0 8px; }
 .team-empty-state a { color:var(--phase-red); font-weight:700; }
 .courses-content { min-height:620px; }
-.course-card { display:grid; grid-template-columns:minmax(280px,440px) minmax(300px,1fr); gap:clamp(32px,5vw,70px); align-items:center; }
-.course-card>img { display:block; width:100%; height:auto; }
-.course-card h3 { margin:0 0 18px; font-size:clamp(1.4rem,2.4vw,2.1rem); }
-.course-card p { margin:0 0 28px; font-size:1rem; }
-.course-card .button { width:auto; padding:0 28px; }
+.course-feature { display:grid; grid-template-columns:minmax(260px,42%) 1fr; gap:48px; align-items:center; margin-top:42px; }
+.course-feature>img { display:block; width:100%; height:auto; border-radius:4px; box-shadow:0 18px 50px rgba(21,35,44,.14); }
+.course-details { align-self:stretch; display:flex; flex-direction:column; justify-content:space-between; }
+.course-details h3 { margin:0; font-size:clamp(1.45rem,2.4vw,2rem); line-height:1.25; }
+.course-details p { margin:0; }
+.course-details .button { align-self:flex-start; width:auto; padding:0 28px; }
+.course-philosophy { grid-column:1/-1; margin:20px 0 0; padding:34px 44px; border:0; border-left:3px solid var(--phase-red); background:#f7f5f1; }
+.course-philosophy p { margin:0; font-size:clamp(1rem,1.35vw,1.16rem); line-height:1.7; }
 .button { background:var(--phase-red); }
 .openings-content {
   display:flex;
@@ -1081,8 +1084,10 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
   .about-content { grid-template-columns:1fr; }
   .team-card { grid-template-columns:180px 1fr; gap:28px; }
   .team-photo-frame { width:180px; padding:10px; }
-  .course-card { grid-template-columns:1fr; }
-  .course-card>img { max-width:520px; }
+  .course-feature { grid-template-columns:1fr; gap:30px; }
+  .course-feature>img { max-width:520px; }
+  .course-details { gap:22px; }
+  .course-philosophy { grid-column:auto; padding:28px; }
 }
 
 @media (max-width:620px) {
