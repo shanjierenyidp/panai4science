@@ -870,11 +870,11 @@ body.is-content-scrolled .site-header {
   box-shadow:none;
   backdrop-filter:blur(10px);
 }
-.brand { flex:0 1 360px; color:var(--phase-ink); text-shadow:none; }
-.brand img { width:min(360px,31vw); height:auto; max-height:82px; object-fit:contain; object-position:left center; }
+.brand { flex:0 1 410px; color:var(--phase-ink); text-shadow:none; }
+.brand img { width:min(410px,34vw); height:auto; max-height:86px; object-fit:contain; object-position:left center; }
 .site-nav { flex-wrap:nowrap; align-items:center; gap:clamp(18px,2.3vw,38px); margin-left:auto; }
 .site-nav a,
-body.is-content-scrolled .site-nav a { color:#303030; font-size:.875rem; font-weight:600; letter-spacing:.02em; text-shadow:none; }
+body.is-content-scrolled .site-nav a { color:#303030; font-size:1rem; font-weight:600; letter-spacing:.02em; text-shadow:none; }
 .site-nav a + a::before { content:none; }
 .site-nav a::after { position:absolute; right:0; bottom:-10px; left:0; height:3px; background:var(--phase-red); content:""; transform:scaleX(0); transition:transform .18s ease; }
 .site-nav a:hover::after,.site-nav a.is-active::after { transform:scaleX(1); }
