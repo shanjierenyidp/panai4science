@@ -7,7 +7,7 @@
   <title>PHASE Lab | Iowa State University</title>
   <link rel="icon" type="image/png" href="materials/lablogov2_only.png">
   <link rel="apple-touch-icon" href="materials/lablogov2_only.png">
-  <link rel="stylesheet" href="styles.css?v=20261014-courses">
+  <link rel="stylesheet" href="styles.css?v=20261015-news-carousel">
 </head>
 <body data-section="home" data-lang="en">
   <div class="water-stage" aria-hidden="true"></div>
@@ -43,6 +43,27 @@
 
   <main>
     <section id="home" class="page-section home-section" data-section="home">
+      <section class="news-carousel" aria-label="Featured research news">
+        <article class="news-slide is-active" data-news-slide>
+          <img src="materials/bannar_1.jpg" alt="DiFVM differentiable computational fluid dynamics platform">
+          <div class="news-slide-copy"><span>Featured Research</span><h1>DiFVM builds a differentiable platform for CFD on unstructured meshes.</h1></div>
+        </article>
+        <article class="news-slide" data-news-slide hidden>
+          <img src="materials/banner_2.jpg" alt="Gallery of generated aortic geometries">
+          <div class="news-slide-copy"><span>Featured Research</span><h1>A large gallery of aortic geometries enables data-driven vascular modeling.</h1></div>
+        </article>
+        <article class="news-slide" data-news-slide hidden>
+          <img src="materials/banner_3.png" alt="Bayesian inference for discovering unknown physics">
+          <div class="news-slide-copy"><span>Featured Research</span><h1>Bayesian inference reveals unknown physics from sparse observations.</h1></div>
+        </article>
+        <button class="news-arrow news-arrow-prev" type="button" aria-label="Previous news story" data-news-prev>&larr;</button>
+        <button class="news-arrow news-arrow-next" type="button" aria-label="Next news story" data-news-next>&rarr;</button>
+        <div class="news-dots" aria-label="Choose news story">
+          <button class="is-active" type="button" aria-label="Show story 1" aria-current="true" data-news-dot="0"></button>
+          <button type="button" aria-label="Show story 2" aria-current="false" data-news-dot="1"></button>
+          <button type="button" aria-label="Show story 3" aria-current="false" data-news-dot="2"></button>
+        </div>
+      </section>
       <div class="content-section about-content">
         <div class="text-block">
           <h2><span class="lang-en">About</span><span class="lang-zh">简介</span></h2>
@@ -271,11 +292,33 @@
     const navToggle = document.querySelector(".nav-toggle");
     const languageToggle = document.querySelector(".language-toggle");
     const backToTop = document.querySelector(".back-to-top");
+    const newsSlides = [...document.querySelectorAll("[data-news-slide]")];
+    const newsDots = [...document.querySelectorAll("[data-news-dot]")];
     const rootStyle = document.documentElement.style;
     const waterStep = 25;
     const waterScrollRatio = 1 / 3;
     let activeIndex = 0;
     let currentWaterX = 0;
+    let activeNewsSlide = 0;
+
+    const showNewsSlide = (index) => {
+      if (!newsSlides.length) return;
+      activeNewsSlide = (index + newsSlides.length) % newsSlides.length;
+      newsSlides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeNewsSlide;
+        slide.hidden = !isActive;
+        slide.classList.toggle("is-active", isActive);
+      });
+      newsDots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === activeNewsSlide;
+        dot.classList.toggle("is-active", isActive);
+        dot.setAttribute("aria-current", String(isActive));
+      });
+    };
+
+    document.querySelector("[data-news-prev]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide - 1));
+    document.querySelector("[data-news-next]")?.addEventListener("click", () => showNewsSlide(activeNewsSlide + 1));
+    newsDots.forEach((dot) => dot.addEventListener("click", () => showNewsSlide(Number(dot.dataset.newsDot))));
 
     const languageStore = {
       get() {
