@@ -1061,15 +1061,20 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
   padding-right:max(24px,calc((100% - 1380px)/2));
   padding-left:max(24px,calc((100% - 1380px)/2));
 }
-.openings-content>p {
+.opening-group {
   width:min(1040px,100%);
-  max-width:1040px;
   margin:0 auto;
-  text-align:center;
-  text-wrap:balance;
 }
-.openings-content>.flyer-button { flex:0 0 auto; margin-inline:auto; }
-.openings-content>.flyer-frame { display:block; align-self:center; margin-inline:auto; }
+.opening-group h2 { margin:0 0 24px; }
+.opening-group>p {
+  width:100%;
+  max-width:none;
+  margin:0;
+  text-align:left;
+}
+.opening-group>.flyer-button { display:flex; margin:36px auto; }
+.opening-group>.flyer-frame { display:block; width:100%; margin:0 auto; }
+.postdoc-openings { padding-top:clamp(12px,2vw,28px); border-top:1px solid var(--phase-line); }
 .site-footer { border-top:1px solid var(--phase-line); }
 
 @media (max-width:960px) {
