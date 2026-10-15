@@ -1034,6 +1034,9 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
 .team-card h3 { margin:0 0 6px; font-size:1.8rem; }
 .team-card p { font-size:1rem; }
 .team-role { margin:0 0 18px; color:var(--phase-red); font-weight:750; }
+.team-contact { margin-top:20px; }
+.team-contact p { margin:7px 0; }
+.team-contact a { color:var(--phase-red); font-weight:650; }
 .team-empty-state { padding:28px 32px; border:1px solid var(--phase-line); background:#fafafa; }
 .team-empty-state p { margin:0 0 8px; }
 .team-empty-state a { color:var(--phase-red); font-weight:700; }
