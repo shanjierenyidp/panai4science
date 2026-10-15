@@ -1019,11 +1019,16 @@ h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; 
 .research-card { padding-bottom:20px; border-bottom:1px solid var(--phase-line); text-align:left; }
 .research-card h3 { margin:0; font-size:1.12rem; font-weight:700; }
 .team-content { min-height:620px; }
+.team-group { margin-top:46px; }
+.team-group-title { margin:0 0 24px; padding-bottom:12px; border-bottom:1px solid var(--phase-line); color:var(--phase-red); font-size:1.15rem; font-weight:750; }
 .team-card { display:grid; grid-template-columns:230px minmax(0,620px); gap:42px; align-items:start; }
 .team-card>img { width:230px; height:270px; object-fit:cover; object-position:center top; }
 .team-card h3 { margin:0 0 6px; font-size:1.8rem; }
 .team-card p { font-size:1rem; }
 .team-role { margin:0 0 18px; color:var(--phase-red); font-weight:750; }
+.team-empty-state { padding:28px 32px; border:1px solid var(--phase-line); background:#fafafa; }
+.team-empty-state p { margin:0 0 8px; }
+.team-empty-state a { color:var(--phase-red); font-weight:700; }
 .courses-content { min-height:620px; }
 .course-card { display:grid; grid-template-columns:minmax(280px,440px) minmax(300px,1fr); gap:clamp(32px,5vw,70px); align-items:center; }
 .course-card>img { display:block; width:100%; height:auto; }
