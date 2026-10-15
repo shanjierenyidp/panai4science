@@ -870,8 +870,8 @@ body.is-content-scrolled .site-header {
   box-shadow:none;
   backdrop-filter:blur(10px);
 }
-.brand { flex:0 1 300px; color:var(--phase-ink); text-shadow:none; }
-.brand img { width:min(300px,28vw); height:auto; max-height:74px; object-fit:contain; object-position:left center; }
+.brand { flex:0 1 360px; color:var(--phase-ink); text-shadow:none; }
+.brand img { width:min(360px,31vw); height:auto; max-height:82px; object-fit:contain; object-position:left center; }
 .site-nav { flex-wrap:nowrap; align-items:center; gap:clamp(18px,2.3vw,38px); margin-left:auto; }
 .site-nav a,
 body.is-content-scrolled .site-nav a { color:#303030; font-size:.875rem; font-weight:600; letter-spacing:.02em; text-shadow:none; }
