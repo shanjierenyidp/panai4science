@@ -976,6 +976,14 @@ body.is-content-scrolled .site-nav a.is-active { color:var(--phase-red); }
 .nav-toggle span,body.is-content-scrolled .nav-toggle span { background:var(--phase-ink); }
 main { padding-top:104px; }
 .page-section { height:calc(100svh - 104px); }
+main { display:block; width:100%; transform:none !important; }
+.page-section { display:none; width:100%; min-width:0; }
+body[data-section="home"] #home,
+body[data-section="research"] #research,
+body[data-section="team"] #team,
+body[data-section="publications"] #publications,
+body[data-section="courses"] #courses,
+body[data-section="openings"] #openings { display:block; }
 .content-section { padding-top:clamp(48px,6vw,76px); padding-bottom:clamp(58px,7vw,92px); }
 .home-section>.research-content,.home-section>.contact-content { display:none; }
 .news-carousel { position:relative; width:100%; height:clamp(360px,48vw,620px); overflow:hidden; background:#111; }
