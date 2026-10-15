@@ -945,3 +945,83 @@ body[data-lang="zh"] .contact-content address .lang-zh {
     height: 42px;
   }
 }
+
+/* PHASE Lab institutional layout */
+:root { --phase-red:#c8102e; --phase-ink:#181818; --phase-line:#dedede; }
+body { color:var(--phase-ink); background:#fff; }
+.water-stage,.page-banner,.hiring-ad,.language-toggle { display:none !important; }
+.site-header,
+body.is-content-scrolled .site-header {
+  min-height:104px;
+  padding:14px max(28px,calc((100vw - 1380px)/2));
+  color:var(--phase-ink);
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--phase-line);
+  box-shadow:none;
+  backdrop-filter:blur(10px);
+}
+.brand { flex:0 1 300px; color:var(--phase-ink); text-shadow:none; }
+.brand img { width:min(300px,28vw); height:auto; max-height:74px; object-fit:contain; object-position:left center; }
+.site-nav { flex-wrap:nowrap; align-items:center; gap:clamp(18px,2.3vw,38px); margin-left:auto; }
+.site-nav a,
+body.is-content-scrolled .site-nav a { color:#303030; font-size:.94rem; font-weight:650; letter-spacing:.02em; text-shadow:none; }
+.site-nav a + a::before { content:none; }
+.site-nav a::after { position:absolute; right:0; bottom:-10px; left:0; height:3px; background:var(--phase-red); content:""; transform:scaleX(0); transition:transform .18s ease; }
+.site-nav a:hover::after,.site-nav a.is-active::after { transform:scaleX(1); }
+.site-nav a.is-active,
+body.is-content-scrolled .site-nav a.is-active { color:var(--phase-red); }
+.isu-link { display:flex; flex:0 0 auto; align-items:center; margin-left:clamp(10px,1.8vw,28px); padding-left:clamp(12px,2vw,28px); border-left:1px solid var(--phase-line); }
+.isu-link img { display:block; width:88px; height:64px; object-fit:contain; }
+.nav-toggle { border-color:#ccc; background:#fff; }
+.nav-toggle span,body.is-content-scrolled .nav-toggle span { background:var(--phase-ink); }
+main { padding-top:104px; }
+.page-section { height:calc(100svh - 104px); }
+.content-section { padding-top:clamp(48px,6vw,76px); padding-bottom:clamp(58px,7vw,92px); }
+.home-section>.research-content,.home-section>.contact-content { display:none; }
+.about-content { grid-template-columns:minmax(320px,.9fr) minmax(360px,1.1fr); }
+h2 { color:var(--phase-ink); font-size:clamp(2rem,3.2vw,3rem); font-weight:700; }
+.about-content h2::after,.research-page-content>h2::after,.team-content>h2::after,.publications-content>h2::after { display:block; width:56px; height:4px; margin-top:16px; background:var(--phase-red); content:""; }
+.section-lead { max-width:820px; margin:-18px 0 46px; font-size:1.08rem; }
+.research-content { border-top:0; }
+.research-card { padding-bottom:20px; border-bottom:1px solid var(--phase-line); text-align:left; }
+.research-card h3 { margin:0; font-size:1.12rem; font-weight:700; }
+.team-content { min-height:620px; }
+.team-card { display:grid; grid-template-columns:230px minmax(0,620px); gap:42px; align-items:start; }
+.team-card>img { width:230px; height:270px; object-fit:cover; object-position:center top; }
+.team-card h3 { margin:0 0 6px; font-size:1.8rem; }
+.team-card p { font-size:1rem; }
+.team-role { margin:0 0 18px; color:var(--phase-red); font-weight:750; }
+.button { background:var(--phase-red); }
+.site-footer { border-top:1px solid var(--phase-line); }
+
+@media (max-width:960px) {
+  .site-header,body.is-content-scrolled .site-header { min-height:82px; padding:10px 18px; }
+  .brand { flex-basis:230px; }
+  .brand img { width:min(230px,48vw); max-height:58px; }
+  .isu-link { order:2; margin-left:auto; padding-left:12px; }
+  .isu-link img { width:62px; height:48px; }
+  .nav-toggle { order:3; }
+  .site-nav { top:100%; right:14px; left:14px; grid-template-columns:1fr; gap:2px; border-color:var(--phase-line); background:rgba(255,255,255,.98); }
+  .site-nav a,.site-nav a.is-active,body.is-content-scrolled .site-nav a { color:var(--phase-ink); text-align:center; }
+  .site-nav a.is-active { color:var(--phase-red); background:#f7f7f7; }
+  .site-nav a::after { display:none; }
+  main { padding-top:82px; }
+  .page-section { height:calc(100svh - 82px); }
+  .about-content { grid-template-columns:1fr; }
+  .team-card { grid-template-columns:180px 1fr; gap:28px; }
+  .team-card>img { width:180px; height:220px; }
+}
+
+@media (max-width:620px) {
+  .site-header,body.is-content-scrolled .site-header { gap:8px; min-height:72px; padding:8px 12px; }
+  .brand { flex-basis:auto; }
+  .brand img { width:min(190px,46vw); max-height:48px; }
+  .isu-link { padding-left:8px; }
+  .isu-link img { width:48px; height:42px; }
+  .nav-toggle { flex-basis:38px; width:38px; height:38px; }
+  main { padding-top:72px; }
+  .page-section { height:calc(100svh - 72px); }
+  .content-section { padding-inline:20px; }
+  .team-card { grid-template-columns:1fr; }
+  .team-card>img { width:190px; height:225px; }
+}
